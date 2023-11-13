@@ -24,7 +24,7 @@ public class DuckDBDriver implements java.sql.Driver {
         if (!acceptsURL(url)) {
             return null;
         }
-        boolean read_only = false;
+        boolean read_only = true;
         if (info == null) {
             info = new Properties();
         } else { // make a copy because we're removing the read only property below
